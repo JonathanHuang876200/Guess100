@@ -6,7 +6,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
+    Random ran = new Random();
+    int r = ran.nextInt(99) + 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         EditText Number = (EditText)findViewById(R.id.number);
         Button Send = (Button)findViewById(R.id.send);
 
+        String s = String.valueOf(r);
+        Secret.setText(s);
     }
 
 
